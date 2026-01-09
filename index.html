@@ -1,94 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Profile</title>
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 text-gray-800">
-
-  <!-- Header / Profile -->
-  <header class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-12">
-    <div class="max-w-4xl mx-auto text-center px-4">
-      <img src="https://via.placeholder.com/150" alt="Profile" class="w-36 h-36 rounded-full mx-auto border-4 border-white mb-4" />
-      <h1 class="text-3xl font-bold">Your Name</h1>
-      <p class="text-lg opacity-90">Student | Developer | Lifelong Learner</p>
-    </div>
-  </header>
-
-  <!-- About Me -->
-  <section class="max-w-4xl mx-auto px-4 py-10">
-    <h2 class="text-2xl font-bold mb-4">About Me</h2>
-    <div class="bg-white rounded-xl shadow p-6">
-      <p>
-        I am a motivated student who is passionate about learning new technologies
-        and improving my skills. I enjoy building applications and solving real-world problems.
-      </p>
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section class="max-w-4xl mx-auto px-4 py-10">
-    <h2 class="text-2xl font-bold mb-4">Education</h2>
-    <div class="bg-white rounded-xl shadow p-6 space-y-3">
-      <div>
-        <h3 class="font-semibold">Bachelor's Degree in Computer Science</h3>
-        <p class="text-sm text-gray-600">University Name (2022 - Present)</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-100 text-gray-800 scroll-smooth">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow z-50">
+      <div class="max-w-4xl mx-auto py-3 flex justify-between items-center">
+        <span class="font-bold text-indigo-600 text-2xl">My Profile</span>
+        <div class="space-x-4 text-sm font-medium">
+          <a href="#about" class="hover:text-indigo-600">About</a>
+          <a href="#education" class="hover:text-indigo-600">Education</a>
+          <a href="#highlights" class="hover:text-indigo-600">Highlights</a>
+          <a href="#skills" class="hover:text-indigo-600">Skills</a>
+          <a href="#contact" class="hover:text-indigo-600">Contact Me</a>
+        </div>
       </div>
-      <div>
-        <h3 class="font-semibold">High School</h3>
-        <p class="text-sm text-gray-600">School Name (2018 - 2021)</p>
+    </nav>
+
+    <div class="h-16"></div>
+    <header
+      class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-16"
+    >
+      <div
+        class="max-w-4xl mx-auto px-4 flex flex-col items-center text-center"
+      >
+        <div class="relative mb-6">
+          <div
+            class="absolute inset-0 rounded-full bg-gradient-to-tr from-pink-400 via-indigo-400 to-purple-500 blur-sm"
+          ></div>
+          <img
+            src="img/profile/LINE_ALBUM_ถ่ายรูป_260109_1.jpg"
+            alt="Profile"
+            class="relative w-36 h-36 rounded-full border-4 border-white shadow-xl object-cover bg-white"
+          />
+        </div>
+
+        <h1 class="text-4xl font-extrabold tracking-tight">ปัญญพนต์ ผลเลิศ</h1>
+        <p class="mt-2 text-lg opacity-95">
+          <span class="font-semibold">Software Engineering</span>
+        </p>
+
+        <div class="mt-6 flex gap-4">
+          <a
+            href="#contact"
+            class="bg-white text-indigo-600 px-6 py-2 rounded-full font-medium hover:bg-indigo-50 transition"
+          >
+            Contact Me
+          </a>
+          <a
+            href="#skills"
+            class="border border-white/70 px-6 py-2 rounded-full font-medium hover:bg-white/10 transition"
+          >
+            View Skills
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Highlights of My Life -->
-  <section class="max-w-4xl mx-auto px-4 py-10">
-    <h2 class="text-2xl font-bold mb-4">Highlights of My Life</h2>
-    <div class="bg-white rounded-xl shadow p-6">
-      <ul class="list-disc pl-5 space-y-2">
-        <li>Built my first web application</li>
-        <li>Joined a university tech club</li>
-        <li>Participated in a hackathon</li>
-        <li>Started learning full-stack development</li>
-      </ul>
-    </div>
-  </section>
 
-  <!-- My Skills -->
-  <section class="max-w-4xl mx-auto px-4 py-10">
-    <h2 class="text-2xl font-bold mb-4">My Skills</h2>
-    <div class="bg-white rounded-xl shadow p-6 flex flex-wrap gap-3">
-      <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full">HTML</span>
-      <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full">CSS</span>
-      <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full">JavaScript</span>
-      <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full">Tailwind CSS</span>
-      <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full">React</span>
-      <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full">Laravel</span>
-    </div>
-  </section>
+    <section id="about" class="max-w-4xl mx-auto px-4 py-10">
+      <h2 class="text-2xl font-bold mb-4">About Me</h2>
+      <div class="bg-white rounded-xl shadow p-6">
+        <p>
+          สวัสดีครับ ผมชื่อ ต้น
+          ปัจจุบันผมยังเป็นนักศึกษาและกำลังมองหาโอกาสในการพัฒนาตนเอง
+          ในอนาคตผมตั้งใจที่จะเรียนให้จบและนำความรู้รวมถึงประสบการณ์ที่ได้รับไปประยุกต์ใช้ในองค์กรที่ทำงานครับ
+        </p>
+      </div>
+    </section>
 
-  <!-- Contact Me -->
-  <section class="max-w-4xl mx-auto px-4 py-10">
-    <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
-    <div class="bg-white rounded-xl shadow p-6">
-      <form class="space-y-4">
-        <input type="text" placeholder="Your Name" class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
-        <input type="email" placeholder="Your Email" class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
-        <textarea rows="4" placeholder="Your Message" class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
-        <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700">
-          Send Message
-        </button>
-      </form>
-    </div>
-  </section>
+    <section id="education" class="max-w-4xl mx-auto px-4 py-10">
+      <h2 class="text-2xl font-bold mb-4">Education</h2>
+      <div class="bg-white rounded-xl shadow p-6 space-y-3">
+        <div>
+          <h3 class="font-semibold">
+            Bachelor of Science in Software Engineering
+          </h3>
+          <p class="text-sm text-gray-600">
+            BURAPHA UNIVERSITY (2023 - Present)
+          </p>
+        </div>
+        <div>
+          <h3 class="font-semibold">High School</h3>
+          <p class="text-sm text-gray-600">
+            Mathayom Taksin Rayong School (2017 - 2023)
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 text-center py-6">
-    <p>© 2026 Your Name. All rights reserved.</p>
-  </footer>
+    <!-- Highlights of My Life -->
+    <section id="highlights" class="max-w-4xl mx-auto px-4 py-10">
+      <h2 class="text-2xl font-bold mb-6">Highlights of My Life</h2>
 
-</body>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Highlight 1 -->
+        <div
+          class="bg-white rounded-xl shadow overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+        >
+          <img
+            src="img/highlights/nsc2024/image.png"
+            alt="First Web App"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-5">
+            <h3 class="font-semibold text-lg mb-2">
+              National Software Contest : NSC 2024
+            </h3>
+            <p class="text-gray-600 text-sm">
+              ในปี 2024 ฉันได้เข้าร่วมการแข่ง "NSC 2024"
+              ออกแบบสร้างเกมผีแนวสยองขวัญ
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+        >
+          <img
+            src="img/highlights/pnrs/image.png"
+            alt="Hackathon"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-5">
+            <h3 class="font-semibold text-lg mb-2">
+              Needs and Problems Reporting System (PNRS)
+            </h3>
+            <p class="text-gray-600 text-sm">
+              ในปี 2024 ได้พัฒนาโปรเจกต์ Needs and Problems Reporting System
+              (PNRS) ร่วมกับบริษัท 92TECH ซึ่งเป็นระบบ
+              สำรวจความคิดเห็นและความต้องการของชุมชน
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+        >
+          <img
+            src="img/highlights/nsc2025/image.png"
+            alt="Tech Club"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-5">
+            <h3 class="font-semibold text-lg mb-2">
+              National Software Contest : NSC 2025
+            </h3>
+            <p class="text-gray-600 text-sm">
+              ในปี 2025 ฉันได้เข้าร่วมการแข่ง "NSC 2025"
+              ออกแบบสร้างเกมผีสตอรี่เนื้อเรื่องแนวสยองขวัญ ชื่อเกม "Walk Alone"
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+        >
+          <img
+            src="img/highlights/obristrack/image.png"
+            alt="Full Stack"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-5">
+            <h3 class="font-semibold text-lg mb-2">Orbis Track</h3>
+            <p class="text-gray-600 text-sm">
+              ในปัจจุบัน กำลังพัฒนาโปรเจกต์ Orbis Track ร่วมกับบริษัท บริษัท
+              สยาม เด็นโซ่ แมนูแฟคเจอริ่ง จำกัด ซึ่งเป็นระบบบริหารการยืม-คืน
+              และแจ้งซ่อมอุปกรณ์ภายในองค์กร
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Skills -->
+    <section id="skills" class="max-w-4xl mx-auto px-4 py-10">
+      <h2 class="text-2xl font-bold mb-8">Skills</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Skill Card -->
+        <div class="bg-white rounded-2xl shadow hover:shadow-lg transition p-6">
+          <h3 class="font-semibold text-lg mb-4 text-indigo-600">
+            💻 Programming Languages
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-sm"
+              >JavaScript</span
+            >
+            <span
+              class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-sm"
+              >Java</span
+            >
+            <span
+              class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-sm"
+              >SQL</span
+            >
+            <span
+              class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-sm"
+              >PHP</span
+            >
+            <span
+              class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-sm"
+              >Python</span
+            >
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow hover:shadow-lg transition p-6">
+          <h3 class="font-semibold text-lg mb-4 text-green-600">
+            🗄 Database Management
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm"
+              >MySQL</span
+            >
+            <span
+              class="px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm"
+              >PostgreSQL</span
+            >
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow hover:shadow-lg transition p-6">
+          <h3 class="font-semibold text-lg mb-4 text-purple-600">
+            📦 Frameworks & Libraries
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm"
+              >React</span
+            >
+            <span
+              class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm"
+              >Node.js</span
+            >
+            <span
+              class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm"
+              >Express</span
+            >
+            <span
+              class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm"
+              >Laravel</span
+            >
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow hover:shadow-lg transition p-6">
+          <h3 class="font-semibold text-lg mb-4 text-orange-600">
+            🔧 Tools & Version Control
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-sm"
+              >Git</span
+            >
+            <span
+              class="px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-sm"
+              >GitHub</span
+            >
+            <span
+              class="px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-sm"
+              >Docker</span
+            >
+            <span
+              class="px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-sm"
+              >Postman</span
+            >
+            <span
+              class="px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-sm"
+              >VS Code</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Me -->
+    <section id="contact" class="max-w-4xl mx-auto px-4 py-14">
+      <h2 class="text-2xl font-bold mb-8 text-center">Contact Me</h2>
+
+      <div
+        class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl shadow-lg p-8"
+      >
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+          <!-- LINE -->
+          <a
+            href="https://line.me/ti/p/HleCjqW5Gs"
+            target="_blank"
+            class="group bg-white/90 backdrop-blur rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl transition"
+          >
+            <div
+              class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-green-100 text-green-600 text-2xl"
+            >
+              <i class="fab fa-line"></i>
+            </div>
+
+            <h3 class="font-semibold text-lg mb-1 group-hover:text-green-600">
+              LINE
+            </h3>
+            <p class="text-sm text-gray-600">@tonkungth1ton</p>
+          </a>
+
+          <!-- Facebook -->
+          <a
+            href="https://www.facebook.com/ton.ton.278016"
+            target="_blank"
+            class="group bg-white/90 backdrop-blur rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl transition"
+          >
+            <div
+              class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-2xl"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </div>
+
+            <h3 class="font-semibold text-lg mb-1 group-hover:text-blue-600">
+              Facebook
+            </h3>
+            <p class="text-sm text-gray-600">Ton Ton</p>
+          </a>
+
+          <!-- Instagram -->
+          <a
+            href="https://instagram.com/ton_6831"
+            target="_blank"
+            class="group bg-white/90 backdrop-blur rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl transition"
+          >
+            <div
+              class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-pink-100 text-pink-600 text-2xl"
+            >
+              <i class="fab fa-instagram"></i>
+            </div>
+
+            <h3 class="font-semibold text-lg mb-1 group-hover:text-pink-600">
+              Instagram
+            </h3>
+            <p class="text-sm text-gray-600">@ton_6831</p>
+          </a>
+
+          <!-- GitHub -->
+          <a
+            href="https://github.com/Tonkungth1"
+            target="_blank"
+            class="group bg-white/90 backdrop-blur rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl transition"
+          >
+            <div
+              class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-gray-100 text-gray-800 text-2xl"
+            >
+              <i class="fab fa-github"></i>
+            </div>
+            <h3 class="font-semibold text-lg mb-1 group-hover:text-gray-800">
+              GitHub
+            </h3>
+            <p class="text-sm text-gray-600">Tonkungth1</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-6">
+      <p>© 2026 Panyapon Phollert. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
